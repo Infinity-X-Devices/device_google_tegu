@@ -41,6 +41,14 @@ $(call inherit-product-if-exists, vendor/google/faceunlock/config.mk)
 # Pixel APN list
 $(call inherit-product, vendor/google/CarrierSettings/telephony.mk)
 
+# Set support hide display cutout feature
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_hide_display_cutout=true
+
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay \
+    AvoidAppsInCutoutOverlay
+
 # Overlays
 PRODUCT_PACKAGES += \
     DMServiceOverlayVendorTegu \
