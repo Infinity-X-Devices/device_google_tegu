@@ -31,3 +31,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 include $(DEVICE_PATH)/wifi/BoardConfig-wifi.mk
 
 include $(VENDOR_PATH)/BoardConfigVendor.mk
+
+# Props
+TARGET_SYSTEM_PROP :=  device/google/tegu/tegu/system.prop

@@ -21,7 +21,7 @@ PRODUCT_16K_DEVELOPER_OPTION := true
 endif
 
 DEVICE_PACKAGE_OVERLAYS += device/google/tegu/tegu/overlay
-DEVICE_PACKAGE_OVERLAYS += device/google/tegu/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += device/google/tegu/overlay-infinity
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -33,6 +33,15 @@ include device/google/zumapro/device-shipping-common.mk
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.prebuilt.xml \
     android.hardware.bluetooth_le.prebuilt.xml
+
+# Camera
+$(call inherit-product-if-exists, vendor/google/camera/config.mk)
+
+# Face unlock
+$(call inherit-product-if-exists, vendor/google/faceunlock/config.mk)
+
+# Pixel Parts
+$(call inherit-product-if-exists, packages/apps/PixelParts/device.mk)
 
 # Recovery files
 PRODUCT_COPY_FILES += \
