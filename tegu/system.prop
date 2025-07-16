@@ -1,0 +1,6 @@
+# Configuration for Pixel 9a
+ro.infinity.soc=Google Tensor G4
+ro.infinity.battery=5100mAh
+ro.infinity.display=1080x2424, P-OLED 6.3 120Hz
+ro.infinity.camera=48MPMain+13MPUltraWide
+ro.product.marketname=Pixel 9a

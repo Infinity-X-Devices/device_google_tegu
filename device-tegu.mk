@@ -30,6 +30,15 @@ PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0-service \
     hwservicemanager
 
+# Always use scudo for memory allocator
+PRODUCT_USE_SCUDO := true
+
+# Camera
+$(call inherit-product-if-exists, vendor/google/camera/config.mk)
+
+# Face unlock
+$(call inherit-product-if-exists, vendor/google/faceunlock/config.mk)
+
 # Overlays
 PRODUCT_PACKAGES += \
     DMServiceOverlayVendorTegu \
